@@ -63,7 +63,7 @@ export default function LoginPage() {
         </form>
 
         <p className="text-center mt-2 text-gray-600 dark:text-gray-400 text-sm">
-          Don't have an account? <a href="/auth/register" className="text-blue-500">Sign up</a>
+          Dont have an account? <a href="/auth/register" className="text-blue-500">Sign up</a>
         </p>
 
         <div className="mt-4 flex justify-center">
