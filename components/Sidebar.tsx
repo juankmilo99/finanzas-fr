@@ -6,6 +6,7 @@ import { Home, CircleDollarSign, Target, PieChart, LogOut } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useSidebar } from "@/context/SidebarContext";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const menuItems = [
   { name: "Dashboard", href: "/dashboard", icon: <Home className="w-5 h-5" /> },
@@ -26,9 +27,17 @@ export default function Sidebar() {
         flex flex-col p-4 border-r dark:border-gray-700 transition-all duration-300`}
     >
       {/* Logo */}
-      <div className={`text-2xl font-bold text-center mb-6 transition-all ${isCollapsed ? "opacity-0 hidden" : "opacity-100"}`}>
-        FinanzasApp
-      </div>
+      {/* Logo con enlace a Dashboard */}
+<Link href="/dashboard" className="flex items-center justify-center gap-2 text-2xl font-bold mb-6 transition-all cursor-pointer">
+  <span>FinanzasApp</span>
+  <Image
+    src="/icon-finances.png"
+    alt="Finanzas App Icon"
+    width={40}
+    height={40}
+  />
+</Link>
+
 
       {/* Menú */}
       <nav className="flex-1">
